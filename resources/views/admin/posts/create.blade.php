@@ -22,7 +22,7 @@
                 <div class="form-group">
 
                     {!! Form::label('category_id', 'Category:') !!}
-                    {!! Form::select('category_id',array(1=> 'PHP',0=>'JavaScript'), null,['class'=>'form-control']) !!}
+                    {!! Form::select('category_id',$categories, null, ['placeholder' => 'Choose Categories','class'=>'form-control']); !!}
 
                 </div>
 
