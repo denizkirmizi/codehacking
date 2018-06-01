@@ -6,6 +6,7 @@
 @section('content')
 
 
+
     <h1>Edit User</h1>
 
     <div class="row">
@@ -69,13 +70,25 @@
 
 
     <div>
-        {!! Form::submit('Update User', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Update User', ['class'=>'btn btn-primary pull-left']) !!}
     </div>
 
 
     {!! Form::close() !!}
-    
+
+      {!! Form::open(['method'=>'DELETE','action'=>['AdminUsersController@destroy',$user->id]]) !!}
+
+      <div>
+          {!! Form::submit('Delete User', ['class'=>'btn btn-danger pull-right']) !!}
+      </div>
+
+
+      {!! Form::close() !!}
+
     </div>
+
+
+
     </div>
     <div class="row">
         @include('includes.form_error')
